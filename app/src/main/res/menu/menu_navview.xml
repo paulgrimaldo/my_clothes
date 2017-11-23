@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_prendas"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/prendas" />
+        <item
+            android:id="@+id/menu_categorias"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/categorias" />
+        <item
+            android:id="@+id/menu_ropa_usada"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/ropa_usada" />
+    </group>
+
+    <item
+        android:id="@+id/navigation_subheader"
+        android:title="@string/otras_opciones">
+        <menu>
+            <item
+                android:id="@+id/menu_contacos"
+                android:icon="@drawable/ic_menu"
+                android:title="@string/contactos" />
+            <item
+                android:id="@+id/menu_favoritos"
+                android:icon="@drawable/ic_menu"
+                android:title="@string/favoritos" />
+        </menu>
+    </item>
+</menu>

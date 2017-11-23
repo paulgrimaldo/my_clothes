@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">My Clothes</string>
+    <string name="prendas">Prendas</string>
+    <string name="categorias">Categorias</string>
+    <string name="ropa_usada">Ropa Usada</string>
+    <string name="otras_opciones">Otras opciones</string>
+    <string name="contactos">Contactos</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="logout">Log out</string>
+    <string name="settings">Settings</string>
+    <string name="nuevo">Nuevo</string>
+
 </resources>
