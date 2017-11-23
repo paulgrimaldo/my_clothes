@@ -9,5 +9,9 @@
     <string name="logout">Log out</string>
     <string name="settings">Settings</string>
     <string name="nuevo">Nuevo</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="marca">Marca</string>
+    <string name="color">Color</string>
+    <string name="Registrar">Registrar</string>
 
 </resources>
