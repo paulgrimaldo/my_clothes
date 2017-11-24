@@ -1,6 +1,7 @@
 package com.apps.paul.myclothes;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,9 +13,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.android.volley.toolbox.Volley;
+import com.apps.paul.myclothes.Utils.Util;
+
 
 public class RopaActivity extends AppCompatActivity {
+    private static final int CAMERA_REQUEST = 1;
     Toolbar appbar;
     private DrawerLayout drawerLayout;
     private NavigationView navView;
@@ -31,7 +34,7 @@ public class RopaActivity extends AppCompatActivity {
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_nav_menu);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        
+
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navView = (NavigationView) findViewById(R.id.navview);
 
@@ -77,7 +80,7 @@ public class RopaActivity extends AppCompatActivity {
                 drawerLayout.openDrawer(GravityCompat.START);
                 return true;
             case R.id.menu_nuevo_ropa:
-
+                registrarPrenda();
                 return true;
             case R.id.action_settings:
                 return true;
@@ -88,6 +91,17 @@ public class RopaActivity extends AppCompatActivity {
         return true;
     }
 
+    private void registrarPrenda() {
+        Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(cameraIntent, CAMERA_REQUEST);
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == CAMERA_REQUEST) {
+            Bitmap photo = (Bitmap) data.getExtras().get("data");
+            Toast.makeText(this, "Color " + Util.intColorToHex(Util.getDominantColor1(photo)), Toast.LENGTH_SHORT).show();
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
