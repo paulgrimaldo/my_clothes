@@ -1,0 +1,48 @@
+  {
+  "project_info": {
+    "project_number": "414563319666",
+    "project_id": "firebase-my-clothes"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414563319666:android:23c0aaf5fed4bc32",
+        "android_client_info": {
+          "package_name": "com.apps.paul.myclothes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414563319666-lj5tv477jeae74jpgfnkr9e171iladfb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apps.paul.myclothes",
+            "certificate_hash": "abf6a27f2218d3ef6e63a8541ff197533599eb92"
+          }
+        },
+        {
+          "client_id": "414563319666-5lv2fr73fh58j411bt25guavatss5hkj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCktJ37Ocdc4d-I3DuWtKEYtWkt726FzEU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
