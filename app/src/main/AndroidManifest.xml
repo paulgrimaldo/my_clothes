@@ -21,12 +21,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" android:theme="@style/AppTheme" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".NoticiasActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RopaActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CategoriaActivity"
+            android:label="@string/title_activity_categoria"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

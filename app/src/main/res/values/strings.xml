@@ -13,5 +13,6 @@
     <string name="marca">Marca</string>
     <string name="color">Color</string>
     <string name="Registrar">Registrar</string>
+    <string name="title_activity_categoria">CategoriaActivity</string>
 
 </resources>
