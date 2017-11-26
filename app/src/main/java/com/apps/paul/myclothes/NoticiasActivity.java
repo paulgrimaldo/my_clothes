@@ -43,7 +43,6 @@ public class NoticiasActivity extends AppCompatActivity {
                         Toast.makeText(getBaseContext(), "Prendas", Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(getBaseContext(), RopaActivity.class);
                         startActivity(i);
-                        finish();
                         break;
                     case R.id.menu_ropa_usada:
                         Toast.makeText(getBaseContext(), "Ropa usada", Toast.LENGTH_SHORT).show();

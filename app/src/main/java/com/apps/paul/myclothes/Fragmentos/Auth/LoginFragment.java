@@ -158,14 +158,24 @@ public class LoginFragment extends Fragment {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            JSONObject json_data = response.getJSONObject("user");
-                            Toast.makeText(getContext(), "Hola " + json_data.getString("nombre"), Toast.LENGTH_LONG).show();
-                            SharedPreferences preferences = getContext().getSharedPreferences("Current_User", Context.MODE_PRIVATE);
-                            SharedPreferences.Editor editor = preferences.edit();
-                            editor.putString("email", json_data.getString("email"));
-                            editor.putString("nombre", json_data.getString("nombre"));
-                            editor.apply();
-                            redirect();
+                            int result = response.getInt("result");
+                            if (result == 200) {
+                                JSONObject json_data = response.getJSONObject("user");
+                                JSONObject json_data_armario = response.getJSONObject("armario");
+                                SharedPreferences preferences = getContext().getSharedPreferences("Current_User", Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = preferences.edit();
+                                editor.putString("email", json_data.getString("email"));
+                                editor.putInt("id_user", json_data.getInt("id"));
+                                editor.putString("nombre", json_data.getString("nombre"));
+                                editor.putInt("id_armario", json_data_armario.getInt("id"));
+                                editor.apply();
+                                String user = "Hola " + json_data.getInt("id") + ": " + json_data.getString("nombre") + " -armario: " + json_data_armario.getInt("id");
+                                Toast.makeText(getContext(), user, Toast.LENGTH_LONG).show();
+                                redirect();
+                            } else {
+                                Toast.makeText(getContext(), "Login fallido intente nuevamente", Toast.LENGTH_LONG).show();
+                            }
+
 
                         } catch (JSONException e) {
                             e.printStackTrace();
